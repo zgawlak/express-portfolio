@@ -1,16 +1,71 @@
+<!-- 
+projects.ejs
+Zoë Gawlak
+301259131
+11 Oct 2023
+-->
+
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>
-    <%= title %>
-  </title>
-  <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>
+        <%= title %>
+    </title>
+    <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
-  <%- include('partials/navbar') %>
+    <!-- navbar -->
+    <%- include('partials/navbar') %>
+        <div class="container">
+            <!-- title -->
+            <h1 class="fs-3 fw-bold text-center">Projects 👩🏻‍🎨</h1>
+            <p class="text-center">Some (solo) things I've worked on!</p>
+            <!-- projects -->
+            <!-- project 1 -->
+            <div class="p-3 my-5 row project justify-content-center align-items-center d-flex">
+                <div class="col-lg-4">
+                    <img src="/images/projects/home-fashion.png" class="shadow-sm rounded project">
+                </div>
+                <div class="col-lg-4">
+                    <h2 class="fs-5 fw-bold">Home & Fashion</h2>
+                    <p>An e-commerce website featuring an updating shopping cart and individual product pages.
+                    </p>
+                    <p><span class="rounded shadow-sm border-1 p-2 bg-white">React</span> <span
+                            class="rounded shadow-sm border-1 p-2 bg-white ms-2">Tailwind</span></p>
+                </div>
+            </div>
+            <!-- project 2 -->
+            <div class="p-3 my-5 row project justify-content-center align-items-center d-flex">
+                <div class="col-lg-4">
+                    <img src="/images/projects/durham-zoo.png" class="shadow-sm rounded project">
+                </div>
+                <div class="col-lg-4">
+                    <h2 class="fs-5 fw-bold">Durham Zoo</h2>
+                    <p>A homepage for a zoo with a gallery, amenities, and ticket information.</p>
+                    <p><span class="rounded shadow-sm border-1 p-2 bg-white">JavaScript</span> <span
+                            class="rounded shadow-sm border-1 p-2 bg-white ms-2">CSS</span></p>
+                </div>
+            </div>
+            <!-- project 3 -->
+            <div class="p-3 my-5 row project justify-content-center align-items-center d-flex">
+                <div class="col-lg-4">
+                    <img src="/images/projects/clover-realty.png" class="shadow-sm rounded project">
+                </div>
+                <div class="col-lg-4">
+                    <h2 class="fs-5 fw-bold">Clover Realty</h2>
+                    <p>A real estate company website with property listings and a contact form.</p>
+                    <p><span class="rounded shadow-sm border-1 p-2 bg-white">CSS</span></p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- footer -->
+        <%- include('partials/footer') %>
+            <script src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

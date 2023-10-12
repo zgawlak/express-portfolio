@@ -1,13 +1,29 @@
+/*
+styles.css
+Zoë Gawlak
+301259131
+11 Oct 2023 
+*/
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #f8f9fa;
 }
 
-a {
-  color: #00B7FF;
-}
-
+/* navbar logo */
 .logo {
   width: 100px;
+}
+
+.project img {
+  width: 300px;
+}
+
+.form {
+  margin-top: 100px;
+}
+
+/* programming language logos */
+.services-logo {
+  width: 50px;
 }

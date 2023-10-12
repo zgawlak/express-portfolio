@@ -1,3 +1,10 @@
+/*
+app.js
+Zoë Gawlak
+301259131
+11 Oct 2023
+*/
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -7,14 +14,21 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// favicon middleware
+var favicon = require('serve-favicon')
+
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// serve static pages at /public
 app.use('/static', express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// set favicons
+app.use(favicon(path.join(__dirname, 'public/images', 'logo.png')))
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -1,16 +1,40 @@
+<!-- 
+projects.ejs
+Zoë Gawlak
+301259131
+11 Oct 2023
+-->
+
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>
-    <%= title %>
-  </title>
-  <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>
+        <%= title %>
+    </title>
+    <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
-  <%- include('partials/navbar') %>
+    <!-- navbar -->
+    <%- include('partials/navbar') %>
+    <div class="container text-center col-lg-6">
+        <!-- title -->
+        <p class="fs-1">👩🏻‍💻</p>
+        <h1 class="fs-3 fw-bold">Welcome to my portfolio!</h1>
+        <!-- mission statement -->
+        <p class="p-3">I wish to become a proficient and impactful software developer by constantly learning, honing
+            my coding skills, and creating high-quality software solutions that solve real-world problems. My
+            mission is to contribute to technological advancements, promote innovation, and inspire others through my
+            passion for programming. I am committed to lifelong learning, embracing challenges, and cultivating
+            a growth mindset.</p>
+            <a href="/about"><button" class="btn btn-outline-dark">More about me</button></a>
+    </div>
+
+        <!-- footer -->
+        <%- include('partials/footer') %>
+            <script src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

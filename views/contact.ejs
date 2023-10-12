@@ -1,16 +1,79 @@
+<!-- 
+contact.ejs
+Zoë Gawlak
+301259131
+11 Oct 2023
+-->
+
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>
-    <%= title %>
-  </title>
-  <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>
+        <%= title %>
+    </title>
+    <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
-  <%- include('partials/navbar') %>
+    <!-- navbar -->
+    <%- include('partials/navbar') %>
+        <div class="container text-center">
+            <!-- title -->
+            <h1 class="fs-3 fw-bold">Contact 🤙🏻</h1>
+            <p>Get in touch with me!</p>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <!-- contact card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="fs-5 text-decoration-underline">Contact Info</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><strong>Name:</strong> Zoe Gawlak</li>
+                                    <li class="list-group-item"><strong>Email:</strong> zgawlak@my.centennialcollege.ca
+                                    </li>
+                                    <li class="list-group-item"><strong>Phone:</strong> (416) 568-1544</li>
+                                    <li class="list-group-item"><strong>Address:</strong> 48 Felicity Drive, Toronto ON
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- contact form-->
+                <div class="row form">
+                    <div class="col-md-6 offset-md-3">
+                        <h2 class="fs-5 fst-italic">Send a message...</h2>
+                        <form id="contact-form">
+                            <div class="form-group p-3 text-start">
+                                <label for="first-name" class="fw-semibold mb-1">First Name</label>
+                                <input type="text" class="form-control" id="first-name" name="first-name" required>
+                            </div>
+                            <div class="form-group p-3 text-start">
+                                <label for="last-name" class="fw-semibold mb-1">Last Name</label>
+                                <input type="text" class="form-control" id="last-name" name="last-name" required>
+                            </div>
+                            <div class="form-group p-3 text-start">
+                                <label for="email" class="fw-semibold mb-1">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group p-3 text-start">
+                                <label for="message" class="fw-semibold mb-1">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <a href="/"><button class="btn btn-outline-success">Submit</button></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <%- include('partials/footer') %>
+            <!-- scripts -->
+                <script src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
+                <script src="/javascript/contact.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,52 @@
+<!-- 
+services.ejs
+Zoë Gawlak
+301259131
+11 Oct 2023
+-->
+
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>
-    <%= title %>
-  </title>
-  <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>
+        <%= title %>
+    </title>
+    <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
-  <%- include('partials/navbar') %>
+    <!-- navbar -->
+    <%- include('partials/navbar') %>
+    <!-- title -->
+        <h1 class="fs-3 text-center fw-bold">Services 💻</h1>
+        <p class="text-center">Here are some services I offer!</p>
+        <!-- programming languages -->
+        <div class="container text-center mt-5 fs-5 fw-light">
+            <!-- js -->
+            <div class="row">
+                <div class="col p-3"><img class="services-logo me-2" src="/images/logos/javascript.png">JavaScript</div>
+                <div class="col p-3"><img class="services-logo me-2" src="/images/logos/react.png">React</div>
+                <div class="col p-3"><img class="services-logo me-2" src="/images/logos/bootstrap.png">Bootstrap</div>
+            </div>
+            <!-- css -->
+            <div class="row">
+                <div class="col p-3"><img class="services-logo me-2" src="/images/logos/css.png">CSS</div>
+                <div class="col p-3"><img class="services-logo me-2" src="/images/logos/tailwind.png">Tailwind</div>
+                <div class="col p-3"><img class="services-logo me-2" src="/images/logos/scss.jpg">SCSS</div>
+            </div>
+            <!-- programming -->
+            <div class="row">
+                <div class="col p-3"><img class="services-logo me-2" src="/images/logos/csharp.png">C#</div>
+                <div class="col p-3"><img class="services-logo me-2" src="/images/logos/java.png">Java</div>
+                <div class="col p-3"><img class="services-logo me-2" src="/images/logos/python.png">Python</div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <%- include('partials/footer') %>
+            <script src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
